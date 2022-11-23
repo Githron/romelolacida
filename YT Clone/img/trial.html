@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            padding-bottom: 2000px;
+        }
+
+
+
+        .header {
+            width: 98vw;
+            position: fixed;
+            display: flex;
+
+        }
+
+        .left {
+            width: 10%;
+            height: 60px;
+            background-color: aquamarine;
+        }
+
+        .mid {
+            background-color: blueviolet;
+            width: 50%;
+        }
+
+        .right {
+            background-color: blue;
+            width: 40%;
+        }
+
+
+        .body-container {
+            display: flex;
+            position: fixed;
+            height: calc(100vh - 60px);
+            /* minus 60px below*/
+            top: 60px;
+        }
+
+        .sidebar {
+            width: 60px;
+            background-color: #212121;
+        }
+
+        .maincontainer {
+            width: calc(100vw - 65px);
+            height: calc(100vh -65px);
+            background-color: rgb(57, 57, 57);
+            overflow-y: scroll;
+            margin-left: 1px;
+            margin-top: 1px;
+        }
+
+        .part {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .par {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="left"></div>
+        <div class="mid"></div>
+        <div class="right"></div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="body-container">
+        <div class="sidebar">
+            <div class="sidebar-items">
+                <a href="#" class="sidebar-item">
+                    <i class="ri-home-5-line"></i>
+                    Home
+                </a>
+            </div>
+        </div>
+
+        <div class="maincontainer">
+            <div class="part">
+                <div class="par">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque quisquam nemo nihil quia nisi.
+                    Aliquam minus, sapiente magnam et nihil ea rem dolorum, reprehenderit natus mollitia dicta cum, quos
+                    ut aspernatur vel officiis. Excepturi facere voluptates autem, quo ut, quia quasi, officiis veniam
+                    iure saepe ad. Ut, ipsum molestiae!
+                </div>
+
+                <div class="par">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque quisquam nemo nihil quia nisi.
+                    Aliquam minus, sapiente magnam et nihil ea rem dolorum, reprehenderit natus mollitia dicta cum, quos
+                    ut aspernatur vel officiis. Excepturi facere voluptates autem, quo ut, quia quasi, officiis veniam
+                    iure saepe ad. Ut, ipsum molestiae!
+                </div>
+
+                <div class="par">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque quisquam nemo nihil quia nisi.
+                    Aliquam minus, sapiente magnam et nihil ea rem dolorum, reprehenderit natus mollitia dicta cum, quos
+                    ut aspernatur vel officiis. Excepturi facere voluptates autem, quo ut, quia quasi, officiis veniam
+                    iure saepe ad. Ut, ipsum molestiae!
+                </div>
+
+                <div class="par">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque quisquam nemo nihil quia nisi.
+                    Aliquam minus, sapiente magnam et nihil ea rem dolorum, reprehenderit natus mollitia dicta cum, quos
+                    ut aspernatur vel officiis. Excepturi facere voluptates autem, quo ut, quia quasi, officiis veniam
+                    iure saepe ad. Ut, ipsum molestiae!
+                </div>
+
+                <div class="par">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eaque quisquam nemo nihil quia nisi.
+                    Aliquam minus, sapiente magnam et nihil ea rem dolorum, reprehenderit natus mollitia dicta cum, quos
+                    ut aspernatur vel officiis. Excepturi facere voluptates autem, quo ut, quia quasi, officiis veniam
+                    iure saepe ad. Ut, ipsum molestiae!
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
