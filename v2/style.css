@@ -120,16 +120,22 @@ span {
 .images {
   display: flex;
   animation: xron 1000ms forwards;
+  animation-timing-function: ease-in-out;
 }
 
 
 @keyframes xron {
   0% {
-    transform: translateX(-100%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(100%);
   }
   100% {
+    opacity: 1;
     transform: translateX(0%);
   }
+  
 }
 
 .images img {
@@ -171,14 +177,15 @@ span {
   .nav-links.active{
     display: flex;
     animation: slide-up 1000ms forwards;
+    animation-timing-function: ease-in-out;
   }
 
   @keyframes slide-up {
     0% {
-      transform: translateX(-100%);
+      transform: translateY(-100%);
     }
     100% {
-      transform: translateX(0%);
+      transform: translateY(0%);
     }
   }
 }
