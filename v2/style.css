@@ -1,112 +1,187 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: initial;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: initial;
 }
 
-body{
-    background-color: rgb(233, 235, 235);
+body {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 100vh;
 }
 
-nav img{
-    width: 100px;
+nav img {
+  margin-left: 8%;
+  width: 100px;
 }
 
-nav{
-    display: flex;
-    width: 84%;
-    margin: auto;
-    padding: 20px 0;
-    align-items: center;
-    justify-content: space-between;
+.nav-bar {
+  background-color: rgb(92, 92, 92);
+  color: white;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-nav i{
-    display: none;
-    font-size: 50px;
+.nav-links{
+  margin-right: 8%;
 }
 
-
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+.nav-links ul{
+  display: flex;
 }
 
-nav ul li a{
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
+.nav-links li{
+  list-style: none;
 }
 
-nav ul li a:hover{
-    color: red;
+.nav-links li a{
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  padding: 1rem;
+  display: block;
 }
 
-
-.box{
-    width: 84%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
-    padding: 0px 8%;
-    row-gap: 10px;
+.nav-links li:hover{
+  background-color: #555;
 }
 
-.detel{
-    margin: auto 0;
+.toggle-btn{
+  text-decoration: none;
+  position: absolute;
+  top: .75rem;
+  right: 12%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
 }
 
-.detel h1{
-    font-size: 50px;
-    color: #212121;
-    margin-bottom: 20px;
-}
-
-span{
-    color: rgb(208, 39, 39);
-}
-
-.detel p{
-    color: #555;
-    line-height: 22px;
-}
-
-.detel a{
-    background-color: #212121;
-    padding: 10px 18px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #fff;
-    display: inline-block;
-    margin: 30px 0;
-    border-radius: 5px;
-}
-
-.images{
-    display: flex;
+.toggle-btn i{
+  font-size: 50px;
+  color: white;
+  border-radius: 10px;
 }
 
 
-.images img{
-    background: url(img/triangle.png);
-    background-repeat: no-repeat;
-    background-size: 140%;
-    background-position: 65% 0;
-    width: 100%;
-    object-fit: cover;
+
+
+
+
+.box {
+  width: 84%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 0px 8%;
+  row-gap: 10px;
+}
+
+.detel {
+  margin: auto 0;
+}
+
+.detel h1 {
+  padding: 10px 18px;
+  font-size: 50px;
+  color: #212121;
+  margin-bottom: 20px;
+}
+
+span {
+  color: rgb(208, 39, 39);
+}
+
+.detel p {
+  color: rgb(85, 85, 85);
+  font-size: 30px;
+  padding: 10px 18px;
+}
+
+.detel a {
+  padding: 10px 18px;
+  font-size: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.images {
+  display: flex;
+  animation: xron 1000ms forwards;
 }
 
 
+@keyframes xron {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.images img {
+  background: url(img/triangle.png);
+  background-repeat: no-repeat;
+  background-size: 140%;
+  background-position: 65% 0;
+  width: 100%;
+  object-fit: cover;
+}
 
 /*  */
-@media (max-width:700px) {
-    nav ul{
-        display: none;
-    }
+@media (max-width: 700px) {
+  .toggle-btn{
+    display: flex;
+  }
 
-    nav i{
-        display: contents;
+  .nav-links{
+    width: 100%;
+    display: none;
+  }
+
+  .nav-bar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li{
+    text-align: center;
+  }
+
+  /* .nav-links li a{} */
+
+  .nav-links.active{
+    display: flex;
+    animation: slide-up 1000ms forwards;
+  }
+
+  @keyframes slide-up {
+    0% {
+      transform: translateX(-100%);
     }
+    100% {
+      transform: translateX(0%);
+    }
+  }
 }
+
+
+
